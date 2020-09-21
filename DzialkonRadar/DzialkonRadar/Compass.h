@@ -9,12 +9,11 @@
 
 class Compass
 {
-private:
-	MechaQMC5883 qmc;
+  private:
+    MechaQMC5883 qmc;
 
-	float Azimuth(int x, int y);
-public:
-	Compass();
-	float Angle();
+    float Azimuth(int x, int y);
+  public:
+    Compass();
+    float Angle();
 };
-
