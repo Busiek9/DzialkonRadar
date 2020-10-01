@@ -1,8 +1,8 @@
 ﻿#include "Timer.h"
 
-Timer::Timer(int rstPin, int dataPin, int clkPin)
+Timer::Timer(int dataPin, int clkPin, int csPin)
 {
-  rtc = new DS1302RTC(rstPin, dataPin, clkPin);
+  rtc = new DS1302RTC(csPin, dataPin, clkPin);
 }
 
 void Timer::SetupClock()

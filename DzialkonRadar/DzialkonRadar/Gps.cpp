@@ -4,10 +4,8 @@ const float Gps::invalidDistance = -1.0f;
 
 Gps::Gps() :
 	// działka Pitera
-	//destLat(51.589655f),
-	//destLong(19.223912f)
-	destLat(51.798631f),
-	destLong(19.457566f),
+	destLat(51.589655f),
+	destLong(19.223912f),
 	ss(Serial1)
 {
 	ss.begin(9600);

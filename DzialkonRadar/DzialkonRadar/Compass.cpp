@@ -12,21 +12,18 @@ float Compass::Angle()
 	float azimuth;
 	qmc.read(&x, &y, &z);
 
-#ifdef CALLIBRATE
-	MySD* mySD = new MySD(49);
-	File file = mySD->OpenFile("comp.txt");
-	file.print(x);
-	file.print("\t");
-	file.print(y);
-	file.print("\t");
-	file.print(z);
-	file.print("\t");
-	file.println(azimuth);
-	mySD->CloseFile(file);
-#endif // CALLIBRATE
-
-	//x = map(x, -1343, -83, -1000, 1000);
-	//y = map(y, 1086, 2086, -1000, 1000); //przesunięty o 600 w prawo?
+//#ifdef CALLIBRATE
+//	MySD* mySD = new MySD(49);
+//	File file = mySD->OpenFile("comp.txt");
+//	file.print(x);
+//	file.print("\t");
+//	file.print(y);
+//	file.print("\t");
+//	file.print(z);
+//	file.print("\t");
+//	file.println(azimuth);
+//	mySD->CloseFile(file);
+//#endif // CALLIBRATE
 
 	x = map(x, -1393, -191, -1000, 1000);
 	y = map(y, 1525, 2376, -1000, 1000);
